@@ -299,6 +299,8 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
+    SecureElement \
+    NfcNci \
     Tag
 ifeq ($(OPLUS_DEVICE_USES_SNXXX_NFC),true)
 PRODUCT_PACKAGES += \
