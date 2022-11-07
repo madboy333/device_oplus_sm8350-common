@@ -19,7 +19,7 @@
         <item>restart_recovery</item>
         <item>restart_bootloader</item>
         <item>restart_fastboot</item>
-     </string-array>
+    </string-array>
 
     <!-- NightLight FOD -->
     <bool name="disable_fod_night_light">true</bool>
