@@ -30,4 +30,8 @@
         <item>org.thunderdog.challegram</item>
         <item>us.zoom.videomeetings</item>
     </string-array>
+
+    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting that can be set by the user. -->
+    <integer name="config_screenBrightnessDoze">35</integer>
 </resources>
