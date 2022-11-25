@@ -28,13 +28,6 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
-# Alert slider
-ifeq ($(PRODUCT_BRAND),OnePlus)
-PRODUCT_PACKAGES += \
-    KeyHandler \
-    tri-state-key-calibrate
-endif
-
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
