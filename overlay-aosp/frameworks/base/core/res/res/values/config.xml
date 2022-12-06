@@ -21,9 +21,6 @@
         <item>restart_fastboot</item>
     </string-array>
 
-    <!-- Whether devices suports in-display fingerprint when screen is off -->
-    <bool name="config_supportsScreenOffUdfps">true</bool>
-
     <!-- The list of package IDs that are not allowed to use aux cameras. -->
     <string-array name="config_cameraAuxPackageExcludeList" translatable="false">
         <item>org.telegram.messenger</item>
@@ -31,7 +28,4 @@
         <item>us.zoom.videomeetings</item>
     </string-array>
 
-    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
-         May be less than the minimum allowed brightness setting that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">35</integer>
 </resources>
