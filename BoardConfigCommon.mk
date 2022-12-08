@@ -231,5 +231,14 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+#TWRP
+ifeq ($(BOARD_BOOT_HEADER_VERSION),4)
+ifeq ($(BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT),true)
+ifeq ($(BOARD_RAMDISK_USE_LZ4),true)
+BOARD_VENDOR_RAMDISK_FRAGMENT.recovery.PREBUILT := $(COMMON_PATH)/tw_recovery.cpio.lz4
+endif
+endif
+endif
+
 # Include the proprietary files BoardConfig.
 include vendor/oplus/sm8350-common/BoardConfigVendor.mk
