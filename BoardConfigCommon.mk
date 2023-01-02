@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -76,7 +75,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
+    vendor/banana/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 ifeq ($(TARGET_NFC_CHIPSET),snxxx)
@@ -230,15 +229,6 @@ WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-#TWRP
-ifeq ($(BOARD_BOOT_HEADER_VERSION),4)
-ifeq ($(BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT),true)
-ifeq ($(BOARD_RAMDISK_USE_LZ4),true)
-BOARD_VENDOR_RAMDISK_FRAGMENT.recovery.PREBUILT := $(COMMON_PATH)/tw_recovery.cpio.lz4
-endif
-endif
-endif
 
 # Include the proprietary files BoardConfig.
 include vendor/oplus/sm8350-common/BoardConfigVendor.mk
